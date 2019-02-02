@@ -14,7 +14,12 @@ Used the latest versions of hibaernate-core and mysql-connector-java (5.4.1.Fina
   `PRIMARY KEY ('id')`<br>
 `);`
 <br><br>
-Change the Hibernate-Config-File (src/main/resoure/hibernate.cfg.xml) according to your DB-Settings. Esp. the username and password lines ;-)
+Change the Hibernate-Config-File (src/main/resoures/hibernate.cfg.xml) according to your DB-Settings. Esp. the username and password lines ;-)
 <br><br>
-
-
+## Hibernate
+Mapping is shown using an XML-File instead of annotations.
+Annotations being covered later in the Course.
+<br><br>
+Mapping file has to be named as: <br>
+`<classname>.hbm.cml`<br>
+And goes under `src/main/resoures` as all the configuration files.
