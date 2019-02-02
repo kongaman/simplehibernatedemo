@@ -26,8 +26,8 @@ And goes under `src/main/resoures` as all the configuration files.<br>
 The config-file itself is pretty straigntforward if in doubt check comments in cfg-file itself.
 <br><br>
 The "per-class-mapping-files" have to be specified in the `hibernate.cfg.xml`
-##### Every time you add a table to the database you have to craete the corresponding mapping file AND add that mapping file to the hibernate config file.
+##### Every time you add a table to the database you have to craete the corresponding mapping file AND add that mapping-file to the hibernate config-file.
 
-##### !!! Not necessary when using annotations instead of cofig files !!!
+##### !!! Not necessary when using annotations instead of config files !!!
 
 
