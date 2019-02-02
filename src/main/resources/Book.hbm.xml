@@ -3,16 +3,22 @@
 "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="demo.Book" table="Book">
-        <id name="id" type="int">
-            <column name="ID" />
-            <generator class="increment" />
-        </id>
-        <property name="bookName" type="java.lang.String">
-            <column name="book_name" />
-        </property>
-       <property name="bookAuthor" type="java.lang.String">
-            <column name="book_author" />
-        </property>
-    </class>
+	<class name="demo.Book" table="book"> <!-- maps Java Class Book to table book -->
+		<id name="id" type="int">
+			<!-- id in JavaClass corresponds to id in table book -->
+			<column name="ID" />
+			<generator class="increment" />
+			<!-- hibernate automatically generates a value for the primary key (id) -->
+			<!-- checks table finds highest value for id and increments it for the next record that is inserted -->
+			<!-- you could leave this to the Database if you specified "auto-increment" on id -->
+		</id>
+		<property name="bookName" type="java.lang.String">
+			<column name="book_name" />
+			<!-- maps Java bookName to book_name column in the DB -->
+		</property>
+		<property name="bookAuthor" type="java.lang.String">
+			<column name="book_author" />
+			<!-- maps Java bookAuthor to book_author column in the DB -->
+		</property>
+	</class>
 </hibernate-mapping>

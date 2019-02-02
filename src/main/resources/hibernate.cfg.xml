@@ -9,5 +9,7 @@
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/bookdb</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">start123</property>
+		<!-- Mapping File(s) -->
+		<mapping resource="Book.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
