@@ -11,16 +11,18 @@ public class Main {
 
 		Book book = new Book();
 		book.setBookName("Der weisse Hai");
-		book.setBookName("dunno");
+		book.setBookAuthor("Peter Benchley");
 		
-		Configuration config = new Configuration();
-		SessionFactory sessionFactory = config.configure().buildSessionFactory();
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 		session.save(book);
 		tx.commit();
 		session.close();
 		sessionFactory.close();
+		
+		System.out.println(book.toString());
+		System.out.println("Book record saved succesfully");
 	}
 
 }
