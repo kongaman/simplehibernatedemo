@@ -1,5 +1,7 @@
-# First Simple Hibernate Demo
+# First Simple Hibernate Demo (**XML Mapping-Version**)
 ## Course "Hibernate Fundamentals for Absolute Beginners" on Udemy
+
+
 
 Used the latest versions of hibaernate-core and mysql-connector-java (5.4.1.Final and 8.0.14 at the time).
 
@@ -21,7 +23,7 @@ Mapping is shown using an XML-File instead of annotations.
 Annotations being covered later in the Course.
 <br><br>
 Mapping file has to be named as: <br>
-`<classname>.hbm.cml`<br>
+`<classname>.hbm.xml`<br>
 And goes under `src/main/resoures` as all the configuration files.<br>
 The config-file itself is pretty straigntforward if in doubt check comments in cfg-file itself.
 <br><br>
@@ -36,7 +38,7 @@ Going strictly by the course i got the following errormessage:<br>
 
 Adding: `?serverTimezone=UTC`<br>
 to the line: `<property name="hibernate.connection.url">jdbc:mysql://localhost/bookdb</property>` <br>
-in "hibernate.cfg.xml" works for now as a quick and dirty fix. So the complete line reads now:<br>
+in `hibernate.cfg.xml` works for now as a quick and dirty fix. So the complete line reads now:<br>
 >`<property name="hibernate.connection.url">jdbc:mysql://localhost/bookdb?serverTimezone=UTC</property>`
 
 
