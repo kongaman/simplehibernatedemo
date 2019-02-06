@@ -9,15 +9,15 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Book book = new Book("Gulliver Reisen", "Karl Dall");
+		Book book = new Book("What does this Button do?", "Bruce Dickinson");
 		
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 		session.save(book);
 		tx.commit();
 		session.close();
-		sessionFactory.close();
+		HibernateUtil.closeSessionFactory();
 		
 		System.out.println(book.toString());
 		System.out.println("Book record saved succesfully");
