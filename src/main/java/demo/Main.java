@@ -9,9 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Book book = new Book();
-		book.setBookName("Der weisse Hai");
-		book.setBookAuthor("Peter Benchley");
+		Book book = new Book("Gulliver Reisen", "Karl Dall");
 		
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();

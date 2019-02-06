@@ -31,11 +31,14 @@ The "per-class-mapping-files" have to be specified in the `hibernate.cfg.xml`
 ##### !!! Not necessary when using annotations instead of config files !!!
 
 ### Problem with Timezone
-Going strictly by the course i got the following errormessage:<br><br>
-`ERROR: The server time zone value 'Mitteleuropäische Zeit' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.`<br><br>
+Going strictly by the course i got the following errormessage:<br>
+>`ERROR: The server time zone value 'Mitteleuropäische Zeit' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.`<br>
+
 Adding: `?serverTimezone=UTC`<br>
 to the line: `<property name="hibernate.connection.url">jdbc:mysql://localhost/bookdb</property>` <br>
 in "hibernate.cfg.xml" works for now as a quick and dirty fix. So the complete line reads now:<br>
-`<property name="hibernate.connection.url">jdbc:mysql://localhost/bookdb?serverTimezone=UTC</property>`
+>`<property name="hibernate.connection.url">jdbc:mysql://localhost/bookdb?serverTimezone=UTC</property>`
+
+
 
 
